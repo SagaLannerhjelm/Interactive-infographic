@@ -46,14 +46,23 @@ a {
   position: relative;
 }
 
-#infographic {
+.infographic-img {
   width: 1200px;
 }
+
+.planet {
+  position: absolute;
+}
+
+.planet:hover {
+  cursor: pointer;
+}
+
+/* Position of the planets */
 
 .planet-1 {
   height: 45px;
   width: 45px;
-  position: absolute;
   right: 16.5%;
   margin-top: 76.5%;
 }
@@ -61,7 +70,6 @@ a {
 .planet-2 {
   height: 45px;
   width: 45px;
-  position: absolute;
   right: 11.4%;
   margin-top: 95%;
 }
@@ -69,7 +77,6 @@ a {
 .planet-3 {
   height: 50px;
   width: 50px;
-  position: absolute;
   right: 34%;
   margin-top: 92%;
 }
@@ -77,7 +84,6 @@ a {
 .planet-4 {
   height: 35px;
   width: 35px;
-  position: absolute;
   right: 19.3%;
   margin-top: 128%;
 }
@@ -85,7 +91,6 @@ a {
 .planet-5 {
   height: 400px;
   width: 400px;
-  position: absolute;
   left: 9%;
   margin-top: 99%;
 }
@@ -101,7 +106,6 @@ a {
 .planet-7 {
   height: 145px;
   width: 145px;
-  position: absolute;
   left: 14.5%;
   margin-top: 204%;
 }
@@ -109,38 +113,11 @@ a {
 .planet-8 {
   height: 140px;
   width: 140px;
-  position: absolute;
   right: 25%;
   margin-top: 291%;
 }
 
-.planet-1:hover {
-  cursor: pointer;
-}
-.planet-2:hover {
-  cursor: pointer;
-}
-.planet-3:hover {
-  cursor: pointer;
-}
-.planet-4:hover {
-  cursor: pointer;
-}
-.planet-5:hover {
-  cursor: pointer;
-}
-.planet-5:hover {
-  cursor: pointer;
-}
-.planet-6:hover {
-  cursor: pointer;
-}
-.planet-7:hover {
-  cursor: pointer;
-}
-.planet-8:hover {
-  cursor: pointer;
-}
+/* Styling and position of the info cards */
 
 .info {
   position: fixed;
@@ -162,7 +139,7 @@ a {
   cursor: pointer;
 }
 
-#info1 {
+.info-card {
   display: none;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
@@ -170,61 +147,7 @@ a {
   animation-fill-mode: forwards;
 }
 
-#info2 {
-  display: none;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-#info3 {
-  display: none;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-#info4 {
-  display: none;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-#info5 {
-  display: none;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-#info6 {
-  display: none;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-#info7 {
-  display: none;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-#info8 {
-  display: none;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
+/* Styling and position of the sources */
 
 .source {
   position: absolute;
@@ -233,15 +156,6 @@ a {
   text-align: center;
   left: 50%;
   margin-left: -40vw;
-}
-
-@keyframes opacity {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -255,6 +169,8 @@ a {
   #infographic {
     width: 100vw;
   }
+
+  /* The position of the planets */
 
   .planet-1 {
     height: 4vw;
@@ -312,6 +228,8 @@ a {
     margin-top: 291%;
   }
 
+  /* The position of the info card */
+
   .info {
     width: 50vw;
     left: 50%;
@@ -324,15 +242,25 @@ a {
     width: 50vw;
     height: auto;
   }
-  .gif {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
+
+  /* Position of the sources */
+
   .source {
     margin-top: 345%;
   }
 }
 
+@media screen and (max-width: 900px) {
+  .gif {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 80%;
+    margin-left: -40%;
+  }
+}
+
 @media screen and (max-width: 650px) {
+  /* Adjustments of elements when devices with 650px in width or smaller are being used */
+
   .info {
     width: 80vw;
     left: 50%;
@@ -345,7 +273,24 @@ a {
     width: 80vw;
     height: auto;
   }
+
   .source {
     margin-top: 335%;
+  }
+
+  .gif {
+    width: 130%;
+    margin-left: -65%;
+  }
+}
+
+/* Animation */
+
+@keyframes opacity {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
